@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "craftmossycobble",
+  "version": "${version}",
+
+  "name": "Craft Mossy Cobblestone",
+  "description": "Allows you to craft mossy cobblestone using 6 Slimeballs, 2 Leaves & 1 Cobblestone.",
+  "authors": [
+    "Dryzalar"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/craft-mossy-cobblestone",
+    "sources": "https://github.com/calmilamsy/stationapi-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/craftmossycobble/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "stationapi:event_bus": [
+      "io.github.dryzalar.craftmossycobble.events.init.InitListener",
+      "io.github.dryzalar.craftmossycobble.events.init.RecipeListener"
+    ],
+    "stationapi:event_bus_client": [
+    ],
+    "stationapi:event_bus_server": [
+    ]
+  },
+  "mixins": [
+    "craftmossycobble.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3"
+  }
+}
